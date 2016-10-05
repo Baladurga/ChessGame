@@ -19,47 +19,6 @@ public class Piece {
 		this.col = col;
 	}
 
-	public String getAcronym() {
-		String acro = "";
-		if (getColor() == 0 && getType() != 0) {
-			acro = "W";
-		}
-		if (getColor() == 1) {
-			acro = "B";
-		}
-		switch (getType()) {
-		case 1:
-			acro += "K";
-			break;
-		case 2:
-			acro += "Q";
-			break;
-		case 3:
-			acro += "R";
-			break;
-		case 4:
-			acro += "N";
-			break;
-		case 5:
-			acro += "B";
-			break;
-		case 6:
-			acro += "P";
-			break;
-		default:
-			break;
-		}
-		return acro;
-	}
-
-	public void setType(int type) {
-		this.type = type;
-	}
-
-	public int getType() {
-		return type;
-	}
-
 	public void setColor(int color) {
 		this.color = color;
 	}

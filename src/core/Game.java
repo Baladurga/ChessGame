@@ -6,7 +6,6 @@ public class Game {
 	public static void main(String[] args) {
 
 		Board board = new Board();
-		board.showGameStateWithNotation();
 		Scanner scan = new Scanner(System.in);
 		Move move = new Move();
 		Player player1 = new Player(0);
@@ -14,8 +13,6 @@ public class Game {
 		int whosTurn = 0;
 		String src, dest;
 		boolean legalmove = false;
-		boolean checkmate = false;
-
 		while (!legalmove) {
 			System.out.println("What piece you'd like to move? (notation)");
 			src = scan.nextLine();
@@ -30,13 +27,7 @@ public class Game {
 				System.out.println("Illegal move");
 			}
 		}
-		if (whosTurn == 0) {
-			whosTurn = 1;
-			System.out.println("player 2 turn");
-		} else if (whosTurn == 1) {
-			whosTurn = 0;
-			System.out.println("player 1 turn");
-		}
+
 	}
 
 }

@@ -1,5 +1,7 @@
 package core;
 
+import java.util.ArrayList;
+
 public class Move {
 	public boolean doMove(Player player, String src, String dest) {
 		if (checkSqValidity(src)) {
@@ -11,27 +13,61 @@ public class Move {
 		return true;
 	}
 
-	public void possibleKingMoves(Piece piece) {
+	public ArrayList<ArrayList<Integer>> possibleKingMoves(Piece piece) {
+		ArrayList<Integer> mvmtX = new ArrayList<Integer>();
+		ArrayList<Integer> mvmtY = new ArrayList<Integer>();
+		ArrayList<ArrayList<Integer>> xAndY = new ArrayList<ArrayList<Integer>>();
+		int x = piece.getRow();
+		int y = piece.getCol();
+		mvmtX.add(x);
+		mvmtY.add(y - 1);// left
+		mvmtX.add(x);
+		mvmtY.add(y + 1);// right
+		mvmtX.add(x - 1);
+		mvmtY.add(y);// up
+		mvmtX.add(x + 1);
+		mvmtY.add(y);// down
+		mvmtX.add(x - 1);
+		mvmtY.add(y - 1);// up-left
+		mvmtX.add(x - 1);
+		mvmtY.add(y + 1);// up-right
+		mvmtX.add(x + 1);
+		mvmtY.add(y + 1);//down-left
+		mvmtX.add(x + 1);
+		mvmtY.add(y - 1);//down-right
+		xAndY.add(mvmtX);
+		xAndY.add(mvmtY);
+
+		return xAndY;
+	}
+
+	public ArrayList<ArrayList<Integer>> possibleQueenMoves(Piece piece) {
+
+		return null;
 
 	}
 
-	public void possibleQueenMoves(Piece piece) {
+	public ArrayList<ArrayList<Integer>> possibleBishopMoves(Piece piece) {
+
+		return null;
 
 	}
 
-	public void possibleBishopMoves(Piece piece) {
+	public ArrayList<ArrayList<Integer>> possibleRookMoves(Piece piece) {
+
+		return null;
 
 	}
 
-	public void possibleRookMoves(Piece piece) {
+	public ArrayList<ArrayList<Integer>> possibleKnightMoves(Piece piece) {
+
+		return null;
 
 	}
 
-	public void possibleKnightMoves(Piece piece) {
+	public ArrayList<ArrayList<Integer>> possiblePawnMoves(Piece piece) {
 
-	}
-
-	public void possiblePawnMoves(Piece piece) {
+		return null;
 
 	}
 
