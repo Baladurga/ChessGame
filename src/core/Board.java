@@ -36,6 +36,7 @@ public class Board {
 
 		pieces.add(new Piece(0, Piece.KING, 0, 4));
 		pieces.add(new Piece(1, Piece.KING, 7, 4));
+		populateBoard();
 	}
 
 	private void populateBoard() {
@@ -43,5 +44,7 @@ public class Board {
 			board[p.getRow()][p.getCol()] = p;
 		}
 	}
+	
+	
 
 }
